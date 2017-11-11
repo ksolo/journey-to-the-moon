@@ -1,12 +1,9 @@
-{{#each model as |project|}}
-  <div class="project">
-    <div>
-      <img src="{{project.logoURL}}" alt="{{project.name}}">
-    </div>
-    <div>
-      <p>{{project.name}}</p>
-    </div>
+<div class="row">
+  <div class="col s12">
+    {{#each model as |project|}}
+      {{project-card project=project}}
+    {{/each}}
   </div>
-{{/each}}
+</div>
 
 {{outlet}}
