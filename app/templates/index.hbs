@@ -1,0 +1,12 @@
+{{#each model as |project|}}
+  <div class="project">
+    <div>
+      <img src="{{project.logoURL}}" alt="{{project.name}}">
+    </div>
+    <div>
+      <p>{{project.name}}</p>
+    </div>
+  </div>
+{{/each}}
+
+{{outlet}}
