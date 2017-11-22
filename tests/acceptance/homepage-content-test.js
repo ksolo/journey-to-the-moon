@@ -3,9 +3,16 @@ import moduleForAcceptance from 'moon/tests/helpers/module-for-acceptance';
 
 moduleForAcceptance('Acceptance | homepage content');
 
+test('homepage visit redirect to projects', function(assert){
+  visit('/');
+  andThen(()=> {
+    assert.equal(currentURL(), '/projects', 'should be the projects page');
+  });
+});
+
 test('homepage should show all lunar projects', function(assert) {
-  visit('/')
+  visit('/');
   andThen(() => {
-    assert.equal(find('.project').length, 3, 'display 3 lunar projects')
-  })
+    assert.equal(find('.project').length, 3, 'display 3 lunar projects');
+  });
 })

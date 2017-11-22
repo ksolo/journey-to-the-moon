@@ -1,0 +1,8 @@
+<div class="row">
+  <div class="col s12">
+    {{#each model as |project|}}
+      {{project-card project=project}}
+    {{/each}}
+  </div>
+</div>
+{{outlet}}
