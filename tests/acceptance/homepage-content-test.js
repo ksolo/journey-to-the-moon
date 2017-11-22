@@ -15,4 +15,12 @@ test('homepage should show all lunar projects', function(assert) {
   andThen(() => {
     assert.equal(find('.project').length, 3, 'display 3 lunar projects');
   });
-})
+});
+
+test('clicking on project links takes you to the project show page', function(assert){
+  visit('/');
+  click('.card-action a:first-of-type')
+  andThen(()=>{
+    assert.equal(currentRouteName(), 'project', 'on the show page');
+  });
+});

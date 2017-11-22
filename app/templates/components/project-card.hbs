@@ -2,6 +2,8 @@
   <img src="{{project.logoURL}}" alt="project.name">
 </div>
 <div class="card-action">
-  {{#link-to 'index'}}{{project.name}}{{/link-to}}
+  {{#link-to 'project' project}}
+    {{project.name}}
+  {{/link-to}}
 </div>
 
