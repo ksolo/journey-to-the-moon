@@ -1,0 +1,8 @@
+html {
+  background-color: black;
+}
+
+.application--header__branding {
+  height: 150px;
+  width: 155px;
+}
